@@ -1,3 +1,5 @@
+const { Note } = require('../mongoose/model');
+
 let notes = [
   { id: '1', content: 'This is a note 1', author: 'T2' },
   { id: '2', content: 'This is a note 2', author: 'T3' },
@@ -6,21 +8,11 @@ let notes = [
 
 module.exports = {
   Query: {
-    notes: () => notes,
-    note: (_, { id }) => notes.find((note) => note.id === id),
+    notes: async () => await Note.find(),
+    note: async (_, { id }) => await Note.findById(id),
   },
 
   Mutation: {
-    note: (_, { content }) => {
-      const newNote = {
-        id: String(notes.length + 1),
-        content,
-        author: `T${notes.length + 1}`,
-      };
-
-      notes.push(newNote);
-
-      return newNote;
-    },
+    note: async (_, { content }) => await Note.create({ content, author: 'T2' }),
   },
 };
