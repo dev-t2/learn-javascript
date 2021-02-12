@@ -1,58 +1,21 @@
-import express from 'express';
-import ase from 'apollo-server-express';
+const { ApolloServer } = require('apollo-server-express');
+const express = require('express');
+const dotenv = require('dotenv');
 
-let notes = [
-  { id: '1', content: 'This is a note 1', author: 'T2' },
-  { id: '2', content: 'This is a note 2', author: 'T3' },
-  { id: '3', content: 'This is a note 3', author: 'T4' },
-];
+const { typeDefs, resolvers } = require('./graphql');
+const mongoose = require('./mongoose');
 
-const { ApolloServer, gql } = ase;
+dotenv.config();
 
-const typeDefs = gql`
-  type Note {
-    id: ID!
-    content: String!
-    author: String!
-  }
-
-  type Query {
-    notes: [Note!]!
-    note(id: ID!): Note!
-  }
-
-  type Mutation {
-    note(content: String!): Note!
-  }
-`;
-
-const resolvers = {
-  Query: {
-    notes: () => notes,
-    note: (_, { id }) => notes.find((note) => note.id === id),
-  },
-  Mutation: {
-    note: (_, { content }) => {
-      const newNote = {
-        id: String(notes.length + 1),
-        content,
-        author: `T${notes.length + 1}`,
-      };
-
-      notes.push(newNote);
-
-      return newNote;
-    },
-  },
-};
+const PORT = process.env.PORT;
+const DB_HOST = process.env.DB_HOST;
 
 const server = new ApolloServer({ typeDefs, resolvers });
-
 const app = express();
-const port = process.env.PORT || 4000;
+
+mongoose.connect(DB_HOST);
 
 server.applyMiddleware({ app, path: '/api' });
-
-app.listen({ port }, () =>
-  console.log(`http://localhost:${port}${server.graphqlPath} 에서 서버 실행 중...`)
+app.listen({ port: PORT }, () =>
+  console.log(`http://localhost:${PORT}${server.graphqlPath} 서버 실행 중...`)
 );
