@@ -3,6 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 
 const { typeDefs, resolvers } = require('./graphql');
+const models = require('./mongoose/models');
 const mongoose = require('./mongoose');
 
 dotenv.config();
@@ -10,10 +11,10 @@ dotenv.config();
 const PORT = process.env.PORT;
 const DB_HOST = process.env.DB_HOST;
 
-const server = new ApolloServer({ typeDefs, resolvers });
-const app = express();
-
 mongoose.connect(DB_HOST);
+
+const server = new ApolloServer({ typeDefs, resolvers, context: () => models });
+const app = express();
 
 server.applyMiddleware({ app, path: '/api' });
 app.listen({ port: PORT }, () =>
