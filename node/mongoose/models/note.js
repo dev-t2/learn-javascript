@@ -4,13 +4,23 @@ const schema = mongoose.Schema(
   {
     content: {
       type: String,
-      require: true,
+      required: true,
     },
     author: {
-      type: mongoose.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
-      require: true,
+      required: true,
     },
+    likeCount: {
+      type: Number,
+      default: 0,
+    },
+    likedBy: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+      },
+    ],
   },
   {
     timestamps: true,

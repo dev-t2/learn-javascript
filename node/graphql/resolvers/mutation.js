@@ -96,4 +96,31 @@ module.exports = {
       throw new Error(e);
     }
   },
+
+  toggleLike: async (parent, { id }, { models, user }) => {
+    if (!user) throw new AuthenticationError('You must be signed in to like a note');
+
+    try {
+      const note = await models.Note.findById(id);
+      const isUser = note.likedBy.indexOf(user.id);
+
+      if (isUser >= 0) {
+        return await models.Note.findByIdAndUpdate(
+          id,
+          { $pull: { likedBy: mongoose.Types.ObjectId(user.id) }, $inc: { likeCount: -1 } },
+          { new: true }
+        );
+      } else {
+        return await models.Note.findByIdAndUpdate(
+          id,
+          { $push: { likedBy: mongoose.Types.ObjectId(user.id) }, $inc: { likeCount: 1 } },
+          { new: true }
+        );
+      }
+    } catch (e) {
+      console.error(e);
+
+      throw new Error(e);
+    }
+  },
 };

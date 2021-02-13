@@ -30,15 +30,15 @@ const getUser = (token) => {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+
   context: ({ req }) => {
     const token = req.headers.authorization;
     const user = getUser(token);
 
-    console.log(user);
-
     return { models, user };
   },
 });
+
 const app = express();
 
 server.applyMiddleware({ app, path: '/api' });
