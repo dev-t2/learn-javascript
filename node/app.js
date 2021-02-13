@@ -1,5 +1,5 @@
-// const cors = require('cors');
-// const helmet = require('helmet');
+const cors = require('cors');
+const helmet = require('helmet');
 const depthLimit = require('graphql-depth-limit');
 const { createComplexityLimitRule } = require('graphql-validation-complexity');
 const { ApolloServer } = require('apollo-server-express');
@@ -13,7 +13,7 @@ const mongoose = require('./mongoose');
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT | 4000;
 const JWT_SECRET = process.env.JWT_SECRET;
 const DB_HOST = process.env.DB_HOST;
 
@@ -47,8 +47,8 @@ const server = new ApolloServer({
 
 const app = express();
 
-// app.use(helmet());
-// app.use(cors());
+app.use(helmet());
+app.use(cors());
 
 server.applyMiddleware({ app, path: '/api' });
 app.listen({ port: PORT }, () =>
