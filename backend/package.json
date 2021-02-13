@@ -1,7 +1,7 @@
 {
-  "name": "node",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "T2MO Backend",
+  "description": "T2-PAD Backend",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon"
