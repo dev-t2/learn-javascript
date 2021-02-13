@@ -1,7 +1,13 @@
 import { memo } from 'react';
 
+import Pages from './pages';
+
 const App = () => {
-  return <div>Hello World</div>;
+  return (
+    <div>
+      <Pages />
+    </div>
+  );
 };
 
 export default memo(App);
