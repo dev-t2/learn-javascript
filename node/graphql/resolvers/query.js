@@ -3,7 +3,7 @@ module.exports = {
     if (!user) throw new AuthenticationError('You must be signed in to search users');
 
     try {
-      return await models.User.find();
+      return await models.User.find().limit(100);
     } catch (e) {
       console.error(e);
     }
@@ -23,7 +23,7 @@ module.exports = {
     if (!user) throw new AuthenticationError('You must be signed in to search notes');
 
     try {
-      return await models.Note.find();
+      return await models.Note.find().limit(100);
     } catch (e) {
       console.error(e);
 
