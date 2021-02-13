@@ -1,3 +1,4 @@
+const cors = require('cors');
 const helmet = require('helmet');
 const { ApolloServer } = require('apollo-server-express');
 const express = require('express');
@@ -43,6 +44,7 @@ const server = new ApolloServer({
 const app = express();
 
 app.use(helmet());
+app.use(cors());
 
 server.applyMiddleware({ app, path: '/api' });
 app.listen({ port: PORT }, () =>
