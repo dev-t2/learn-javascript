@@ -9,14 +9,14 @@ dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET;
 
 module.exports = {
-  signUp: async (parent, { nickname, email, password }, { User }) => {
+  signUp: async (parent, { nickname, email, password }, { models }) => {
     email = email.trim();
     password = await bcrypt.hash(password, 10);
 
     const avatar = gravatar(email);
 
     try {
-      const user = await User.create({ nickname, email, password, avatar });
+      const user = await models.User.create({ nickname, email, password, avatar });
 
       return jwt.sign({ id: user._id }, JWT_SECRET);
     } catch (e) {
@@ -26,11 +26,11 @@ module.exports = {
     }
   },
 
-  signIn: async (parent, { email, password }, { User }) => {
+  signIn: async (parent, { email, password }, { models }) => {
     email = email.trim();
 
     try {
-      const user = await User.findOne({ email });
+      const user = await models.User.findOne({ email });
 
       if (!user) throw new AuthenticationError('Could not find users for the email entered');
 
@@ -46,9 +46,9 @@ module.exports = {
     }
   },
 
-  createNote: async (parent, { content }, { Note }) => {
+  createNote: async (parent, { content }, { models }) => {
     try {
-      return await Note.create({ content, author: 'T2' });
+      return await models.Note.create({ content, author: 'T2' });
     } catch (e) {
       console.error(e);
 
@@ -56,9 +56,9 @@ module.exports = {
     }
   },
 
-  updateNote: async (parent, { id, content }, { Note }) => {
+  updateNote: async (parent, { id, content }, { models }) => {
     try {
-      return await Note.findOneAndUpdate({ _id: id }, { $set: { content } }, { new: true });
+      return await models.Note.findOneAndUpdate({ _id: id }, { $set: { content } }, { new: true });
     } catch (e) {
       console.error(e);
 
@@ -66,9 +66,9 @@ module.exports = {
     }
   },
 
-  deleteNote: async (parent, { id }, { Note }) => {
+  deleteNote: async (parent, { id }, { models }) => {
     try {
-      const deletedNote = await Note.findOneAndRemove({ _id: id });
+      const deletedNote = await models.Note.findOneAndRemove({ _id: id });
 
       return !!deletedNote;
     } catch (e) {
