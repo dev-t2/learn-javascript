@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 const bcrypt = require('bcrypt');
 const { gravatar } = require('../../lib');
 const jwt = require('jsonwebtoken');
+const { AuthenticationError } = require('apollo-server-express');
 
 dotenv.config();
 
@@ -20,6 +21,28 @@ module.exports = {
       return jwt.sign({ id: user._id }, JWT_SECRET);
     } catch (e) {
       console.error(e);
+
+      throw new Error('Internal signup error');
+    }
+  },
+
+  signIn: async (parent, { email, password }, { User }) => {
+    email = email.trim();
+
+    try {
+      const user = await User.findOne({ email });
+
+      if (!user) throw new AuthenticationError('Could not find users for the email entered');
+
+      const isPassword = await bcrypt.compare(password, user.password);
+
+      if (!isPassword) throw new AuthenticationError('The password entered is incorrect');
+
+      return jwt.sign({ id: user._id }, JWT_SECRET);
+    } catch (e) {
+      console.error(e);
+
+      throw new Error('Internal signin error');
     }
   },
 
@@ -28,6 +51,8 @@ module.exports = {
       return await Note.create({ content, author: 'T2' });
     } catch (e) {
       console.error(e);
+
+      throw new Error('Internal create note error');
     }
   },
 
@@ -36,18 +61,20 @@ module.exports = {
       return await Note.findOneAndUpdate({ _id: id }, { $set: { content } }, { new: true });
     } catch (e) {
       console.error(e);
+
+      throw new Error('Internal update note error');
     }
   },
 
   deleteNote: async (parent, { id }, { Note }) => {
     try {
-      await Note.findOneAndRemove({ _id: id });
+      const deletedNote = await Note.findOneAndRemove({ _id: id });
 
-      return true;
+      return !!deletedNote;
     } catch (e) {
       console.error(e);
 
-      return false;
+      throw new Error('Internal delete note error');
     }
   },
 };
