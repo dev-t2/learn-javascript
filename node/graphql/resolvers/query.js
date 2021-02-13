@@ -42,4 +42,36 @@ module.exports = {
       throw new Error(e);
     }
   },
+
+  noteFeed: async (parent, { cursor, limit = 10 }, { models }) => {
+    let isNextPage = false;
+    let cursorQuery = {};
+
+    if (cursor) {
+      cursorQuery = { _id: { $lt: cursor } };
+    }
+
+    try {
+      let notes = await models.Note.find(cursorQuery)
+        .sort({ _id: -1 })
+        .limit(limit + 1);
+
+      if (notes.length > limit) {
+        isNextPage = true;
+        notes = notes.slice(0, -1);
+      }
+
+      const newCursor = notes[notes.length - 1].id;
+
+      return {
+        notes,
+        cursor: newCursor,
+        isNextPage,
+      };
+    } catch (e) {
+      console.error(e);
+
+      throw new Error(e);
+    }
+  },
 };
