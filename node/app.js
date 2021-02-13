@@ -1,3 +1,4 @@
+const helmet = require('helmet');
 const { ApolloServer } = require('apollo-server-express');
 const express = require('express');
 const jwt = require('jsonwebtoken');
@@ -40,6 +41,8 @@ const server = new ApolloServer({
 });
 
 const app = express();
+
+app.use(helmet());
 
 server.applyMiddleware({ app, path: '/api' });
 app.listen({ port: PORT }, () =>
