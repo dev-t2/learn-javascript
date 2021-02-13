@@ -7,7 +7,8 @@ const schema = mongoose.Schema(
       require: true,
     },
     author: {
-      type: String,
+      type: mongoose.Types.ObjectId,
+      ref: 'User',
       require: true,
     },
   },

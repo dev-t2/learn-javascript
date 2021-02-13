@@ -2,7 +2,8 @@ const dotenv = require('dotenv');
 const bcrypt = require('bcrypt');
 const { gravatar } = require('../../lib');
 const jwt = require('jsonwebtoken');
-const { AuthenticationError } = require('apollo-server-express');
+const mongoose = require('mongoose');
+const { AuthenticationError, ForbiddenError } = require('apollo-server-express');
 
 dotenv.config();
 
@@ -22,7 +23,7 @@ module.exports = {
     } catch (e) {
       console.error(e);
 
-      throw new Error('Internal signup error');
+      throw new Error(e);
     }
   },
 
@@ -42,39 +43,57 @@ module.exports = {
     } catch (e) {
       console.error(e);
 
-      throw new Error('Internal signin error');
+      throw new Error(e);
     }
   },
 
-  createNote: async (parent, { content }, { models }) => {
+  createNote: async (parent, { content }, { models, user }) => {
+    if (!user) throw new AuthenticationError('You must be signed in to create a note');
+
     try {
-      return await models.Note.create({ content, author: 'T2' });
+      return await models.Note.create({ content, author: mongoose.Types.ObjectId(user.id) });
     } catch (e) {
       console.error(e);
 
-      throw new Error('Internal create note error');
+      throw new Error(e);
     }
   },
 
-  updateNote: async (parent, { id, content }, { models }) => {
+  updateNote: async (parent, { id, content }, { models, user }) => {
+    if (!user) throw new AuthenticationError('You must be signed in to update a note');
+
     try {
+      const note = await models.Note.findById(id);
+
+      if (!note || String(note.author) !== user.id) {
+        throw new ForbiddenError('You do not have permission to update the note');
+      }
+
       return await models.Note.findOneAndUpdate({ _id: id }, { $set: { content } }, { new: true });
     } catch (e) {
       console.error(e);
 
-      throw new Error('Internal update note error');
+      throw new Error(e);
     }
   },
 
-  deleteNote: async (parent, { id }, { models }) => {
-    try {
-      const deletedNote = await models.Note.findOneAndRemove({ _id: id });
+  deleteNote: async (parent, { id }, { models, user }) => {
+    if (!user) throw new AuthenticationError('You must be signed in to delete a note');
 
-      return !!deletedNote;
+    try {
+      const note = await models.Note.findById(id);
+
+      if (!note || String(note.author) !== user.id) {
+        throw new ForbiddenError('You do not have permission to delete the note');
+      }
+
+      const removedNote = await note.remove();
+
+      return !!removedNote;
     } catch (e) {
       console.error(e);
 
-      throw new Error('Internal delete note error');
+      throw new Error(e);
     }
   },
 };
