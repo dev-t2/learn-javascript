@@ -7,7 +7,6 @@ const Likes = () => {
 
   return (
     <>
-      <h1>T2Pad</h1>
       <p>This is the likes page</p>
     </>
   );

@@ -7,7 +7,6 @@ const Notes = () => {
 
   return (
     <>
-      <h1>T2Pad</h1>
       <p>This is the notes page</p>
     </>
   );
