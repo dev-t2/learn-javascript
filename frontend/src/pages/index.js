@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Home from './home';
 import Notes from './notes';
 import Likes from './likes';
+import NotePage from './note';
 
 const Pages = () => {
   return (
@@ -13,6 +14,7 @@ const Pages = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/notes" component={Notes} />
         <Route exact path="/likes" component={Likes} />
+        <Route path="/note/:id" component={NotePage} />
       </Layout>
     </Router>
   );

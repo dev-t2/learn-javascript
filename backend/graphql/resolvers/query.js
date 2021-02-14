@@ -32,7 +32,7 @@ module.exports = {
   },
 
   note: async (parent, { id }, { models }) => {
-    if (!user) throw new AuthenticationError('You must be signed in to search note');
+    // if (!user) throw new AuthenticationError('You must be signed in to search note');
 
     try {
       return await models.Note.findById(id);
