@@ -48,7 +48,7 @@ module.exports = {
     let cursorQuery = {};
 
     if (cursor) {
-      cursorQuery = { _id: { $lt: cursor } };
+      cursorQuery = { _id: { $lte: cursor } };
     }
 
     try {
@@ -61,7 +61,7 @@ module.exports = {
         notes = notes.slice(0, -1);
       }
 
-      const newCursor = notes[notes.length - 1].id;
+      const newCursor = notes[notes.length - 1]._id;
 
       return {
         notes,
