@@ -4,7 +4,7 @@ import Pages from './pages';
 
 const App = () => {
   return (
-    <div>
+    <div className="h-screen flex flex-col">
       <Pages />
     </div>
   );
