@@ -48,7 +48,7 @@ module.exports = {
     let cursorQuery = {};
 
     if (cursor) {
-      cursorQuery = { _id: { $lte: cursor } };
+      cursorQuery = { _id: { $lt: cursor } };
     }
 
     try {
