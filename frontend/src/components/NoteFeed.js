@@ -5,7 +5,12 @@ const NoteFeed = ({ notes }) => {
   return (
     <div>
       {notes.map((note) => (
-        <Note key={note.id} note={note} />
+        <div
+          key={note.id}
+          className="max-w-3xl mx-auto mb-8 pb-8 border-b border-solid border-gray-200"
+        >
+          <Note note={note} />
+        </div>
       ))}
     </div>
   );
