@@ -26,36 +26,36 @@ const GET_NOTES = gql`
 const HomePage = () => {
   const { data, loading, fetchMore } = useQuery(GET_NOTES);
 
-  const onClickMore = useCallback(
-    () =>
-      fetchMore({
-        variables: { cursor: data.noteFeed.cursor },
-        updateQuery: (previousResult, { fetchMoreResult }) => {
-          return {
-            noteFeed: {
-              notes: [...previousResult.noteFeed.notes, ...fetchMoreResult.noteFeed.notes],
-              cursor: fetchMoreResult.noteFeed.cursor,
-              isNextPage: fetchMoreResult.noteFeed.isNextPage,
-              __typename: 'noteFeed',
-            },
-          };
-        },
-      }),
+  // const onClickMore = useCallback(
+  //   () =>
+  //     fetchMore({
+  //       variables: { cursor: data.noteFeed.cursor },
+  //       updateQuery: (previousResult, { fetchMoreResult }) => {
+  //         return {
+  //           noteFeed: {
+  //             notes: [...previousResult.noteFeed.notes, ...fetchMoreResult.noteFeed.notes],
+  //             cursor: fetchMoreResult.noteFeed.cursor,
+  //             isNextPage: fetchMoreResult.noteFeed.isNextPage,
+  //             __typename: 'noteFeed',
+  //           },
+  //         };
+  //       },
+  //     }),
 
-    [fetchMore, data?.noteFeed?.cursor]
-  );
+  //   [fetchMore, data?.noteFeed?.cursor]
+  // );
 
   if (loading) return <div>Loading...</div>;
 
   return (
     <>
-      <NoteFeed notes={data.noteFeed.notes} />
+      {/* <NoteFeed notes={data.noteFeed.notes} /> */}
 
-      {data.noteFeed.isNextPage && (
+      {/* {data.noteFeed.isNextPage && (
         <button className="button" onClick={onClickMore}>
           VIEW MORE
         </button>
-      )}
+      )} */}
     </>
   );
 };
