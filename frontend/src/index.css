@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
 
-.header-link {
-  @apply text-gray-100 text-sm font-medium px-3 py-2 rounded-md hover:bg-blue-700 hover:text-white;
+.nav-link {
+  @apply text-sm font-medium text-gray-100 hover:text-white hover:bg-blue-700 px-3 py-2 rounded-md;
 }
 
 .button {
