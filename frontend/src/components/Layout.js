@@ -1,20 +1,20 @@
 import { memo } from 'react';
 
 import Header from './Header';
-import Contents from './Contents';
+import Footer from './Footer';
 
-const title = 'T2Pad';
-const items = ['Notes', 'Likes'];
+const navItems = ['Notes', 'Likes'];
 
 const Layout = ({ children }) => {
   return (
     <div className="h-screen flex flex-col">
-      <Header title={title} items={items} />
-      <Contents />
+      <Header title="T2Pad" navItems={navItems} />
 
       <div className="flex-1">
         <main>{children}</main>
       </div>
+
+      <Footer title="&copy; T2Pad 2021" />
     </div>
   );
 };
