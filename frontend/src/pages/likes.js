@@ -1,6 +1,6 @@
 import { memo, useEffect } from 'react';
 
-const Likes = () => {
+const LikesPage = () => {
   useEffect(() => {
     document.title = 'Likes - T2Pad';
   }, []);
@@ -12,4 +12,4 @@ const Likes = () => {
   );
 };
 
-export default memo(Likes);
+export default memo(LikesPage);

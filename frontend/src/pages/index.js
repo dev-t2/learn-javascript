@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Layout from '../components/Layout';
 import HomePage from './home';
 import SignUpPage from './signup';
-import Notes from './notes';
-import Likes from './likes';
+import NotesPage from './notes';
+import LikesPage from './likes';
 import NotePage from './note';
 
 const Pages = () => {
@@ -14,8 +14,8 @@ const Pages = () => {
       <Layout>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/signup" component={SignUpPage} />
-        <Route exact path="/notes" component={Notes} />
-        <Route exact path="/likes" component={Likes} />
+        <Route exact path="/notes" component={NotesPage} />
+        <Route exact path="/likes" component={LikesPage} />
         <Route path="/note/:id" component={NotePage} />
       </Layout>
     </Router>

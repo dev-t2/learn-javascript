@@ -1,6 +1,6 @@
 import { memo, useEffect } from 'react';
 
-const Notes = () => {
+const NotesPage = () => {
   useEffect(() => {
     document.title = 'Notes - T2Pad';
   }, []);
@@ -12,4 +12,4 @@ const Notes = () => {
   );
 };
 
-export default memo(Notes);
+export default memo(NotesPage);
