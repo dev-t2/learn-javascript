@@ -7,6 +7,7 @@ const HomePage = () => {
         <h2 className="sm:ml-8 mb-1 sm:mb-2 text-2xl sm:text-4xl font-bold text-blue-800 flex justify-center sm:justify-start">
           THIS, TOO, SHALL PASS AWAY.
         </h2>
+
         <p className="sm:ml-8 mb-8 sm:mb-12 text-xs sm:text-base font-bold text-gray-400 flex justify-center sm:justify-start">
           잊지 말자. 지금 내가 열고 들어온 문이 한 때는 다 벽이었다는걸...
         </p>
@@ -17,12 +18,12 @@ const HomePage = () => {
 
         <div className="sm:ml-8 mb-8 sm:mb-16 space-x-4 flex justify-center sm:justify-start">
           <img
-            className="h-8 sm:h-12 md:h-14 rounded-lg cursor-pointer"
+            className="h-10 sm:h-12 md:h-14 rounded-md sm:rounded-lg cursor-pointer"
             src="images/microsoft.svg"
             alt="microsoft"
           />
           <img
-            className="h-8 sm:h-12 md:h-14 cursor-pointer"
+            className="h-10 sm:h-12 md:h-14 cursor-pointer"
             src="images/google.svg"
             alt="google"
           />

@@ -10,9 +10,7 @@ const Layout = ({ children }) => {
     <div className="h-screen flex flex-col">
       <Header title="T2Pad" navItems={navItems} />
 
-      <div className="flex-1">
-        <main>{children}</main>
-      </div>
+      <main className="flex-1">{children}</main>
 
       <Footer title="&copy; T2Pad 2021" />
     </div>
