@@ -8,7 +8,7 @@ const HomePage = () => {
           THIS, TOO, SHALL PASS AWAY.
         </h2>
 
-        <p className="sm:ml-8 mb-8 sm:mb-12 text-xs sm:text-base font-bold text-gray-400 flex justify-center sm:justify-start">
+        <p className="sm:ml-8 mb-8 sm:mb-12 text-xs sm:text-base text-gray-400 flex justify-center sm:justify-start">
           잊지 말자. 지금 내가 열고 들어온 문이 한 때는 다 벽이었다는걸...
         </p>
 

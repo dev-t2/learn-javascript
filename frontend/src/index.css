@@ -10,7 +10,7 @@
 }
 
 .signup-input {
-  @apply mt-1 block w-full shadow-sm rounded-md p-2 text-sm font-medium text-gray-900 border border-solid border-gray-300 focus:outline-none;
+  @apply mt-1 block w-full shadow-sm rounded-md p-3 text-sm font-medium text-gray-900 border border-solid border-gray-300 focus:outline-none;
 }
 
 @tailwind utilities;
