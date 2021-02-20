@@ -1,11 +1,8 @@
 import { memo } from 'react';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { ApolloProvider } from '@apollo/client';
 
+import client from './apollo';
 import Pages from './pages';
-
-const uri = process.env.REACT_APP_API_URI;
-const cache = new InMemoryCache();
-const client = new ApolloClient({ uri, cache, connectToDevTools: true });
 
 const App = () => {
   return (

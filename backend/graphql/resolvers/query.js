@@ -1,6 +1,6 @@
 module.exports = {
   users: async (parent, args, { models, user }) => {
-    if (!user) throw new AuthenticationError('You must be signed in to search users');
+    // if (!user) throw new AuthenticationError('You must be signed in to search users');
 
     try {
       return await models.User.find().limit(100);
