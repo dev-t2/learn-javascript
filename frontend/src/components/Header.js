@@ -1,23 +1,60 @@
 import { useReactiveVar } from '@apollo/client';
-import { memo } from 'react';
+import { memo, useCallback, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { isLoggedInVar } from '../apollo';
 import Logo from './Logo';
+import Menu from './Menu';
 import Nav from './Nav';
+
+const menuItems = ['Notes', 'Likes'];
 
 const Header = ({ title, navItems }) => {
   const isLoggedIn = useReactiveVar(isLoggedInVar);
 
   console.log(isLoggedIn);
 
+  const [isMenu, setIsMenu] = useState(false);
+
+  const onClick = useCallback(() => {
+    setIsMenu((prev) => !prev);
+  }, []);
+
   return (
     <header className="bg-blue-800">
       <div className="h-14 sm:h-16 max-w-7xl mx-auto px-4 flex items-center justify-between">
-        <div className="flex-1 flex items-center justify-center sm:justify-start">
+        <div className="flex-1 flex items-center justify-between sm:justify-start">
+          <Menu isMenu={isMenu} onClick={onClick} />
           <Logo title={title} />
           <Nav items={navItems} />
+
+          <button className="block sm:hidden">
+            <img
+              class="h-6 rounded-full"
+              src="https://www.gravatar.com/avatar/bafdc5cd1958bfacf19d28e152c9f3aa.jpg?d=identicon"
+              alt=""
+            />
+          </button>
         </div>
+
+        <button className="hidden sm:block">
+          <img
+            class="h-8 rounded-full"
+            src="https://www.gravatar.com/avatar/bafdc5cd1958bfacf19d28e152c9f3aa.jpg?d=identicon"
+            alt=""
+          />
+        </button>
       </div>
+
+      {isMenu && (
+        <div className="sm:hidden p-2 pb-6 space-y-1">
+          {menuItems.map((item, index) => (
+            <Link key={index} className="menu-link">
+              {item}
+            </Link>
+          ))}
+        </div>
+      )}
     </header>
   );
 };

@@ -13,4 +13,8 @@
   @apply mt-1 block w-full shadow-sm rounded-md p-3 text-sm font-medium text-gray-900 border border-solid border-gray-300 focus:outline-none;
 }
 
+.menu-link {
+  @apply block text-white hover:bg-blue-900 px-4 py-2 rounded-md;
+}
+
 @tailwind utilities;

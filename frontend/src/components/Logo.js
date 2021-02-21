@@ -6,7 +6,7 @@ const Logo = ({ title }) => {
     <h1 className="flex items-center">
       <Link to="/">
         <svg
-          className="w-8 h-8 text-white"
+          className="h-8 text-white"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
