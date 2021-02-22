@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { isLoggedInVar } from '../apollo';
 import Logo from './Logo';
+import Logout from './Logout';
 import Menu from './Menu';
 import Nav from './Nav';
 
@@ -27,17 +28,16 @@ const Header = ({ title, navItems }) => {
           <Menu isMenu={isMenu} onClick={onClick} />
           <Logo title={title} />
           <Nav items={navItems} />
-
-          <button className="block sm:hidden w-16 header-logout">Logout</button>
+          <Logout className="block sm:hidden" />
         </div>
 
-        <button className="hidden sm:block w-16 header-logout">Logout</button>
+        <Logout className="hidden sm:block" />
       </div>
 
       {isMenu && (
         <div className="sm:hidden p-2 pb-6 space-y-1">
           {menuItems.map((item, index) => (
-            <Link key={index} className="menu-link">
+            <Link key={index} className="menu-link" to={`/${item}`}>
               {item}
             </Link>
           ))}
