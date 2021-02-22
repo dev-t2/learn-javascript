@@ -1,12 +1,8 @@
 import { memo, useCallback, useState } from 'react';
-import { gql, useMutation } from '@apollo/client';
-import { isLoggedInVar } from '../apollo';
+import { useMutation } from '@apollo/client';
 
-const SIGN_UP = gql`
-  mutation signUp($nickname: String!, $email: String!, $password: String!) {
-    signUp(nickname: $nickname, email: $email, password: $password)
-  }
-`;
+import { isLoggedInVar } from '../apollo';
+import { SIGN_UP } from '../apollo/mutation';
 
 const SignUpForm = ({ history }) => {
   const [signUp] = useMutation(SIGN_UP, {

@@ -48,6 +48,8 @@ module.exports = {
   },
 
   createNote: async (parent, { content }, { models, user }) => {
+    console.log(user);
+
     if (!user) throw new AuthenticationError('You must be signed in to create a note');
 
     try {

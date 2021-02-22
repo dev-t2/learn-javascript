@@ -6,6 +6,7 @@ import { isLoggedInVar } from '../apollo';
 import Layout from '../components/Layout';
 import HomePage from './home';
 import SignUpPage from './signup';
+import CreatePage from './create';
 import NotesPage from './notes';
 import LikesPage from './likes';
 import NotePage from './note';
@@ -21,6 +22,7 @@ const Pages = () => {
         {isLoggedIn ? (
           <>
             <Route exact path="/signup" component={SignUpPage} />
+            <Route exact path="/create" component={CreatePage} />
             <Route exact path="/notes" component={NotesPage} />
             <Route exact path="/likes" component={LikesPage} />
             <Route path="/note/:id" component={NotePage} />

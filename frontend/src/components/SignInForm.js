@@ -1,17 +1,12 @@
 import { memo, useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { gql, useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 
 import { isLoggedInVar } from '../apollo';
-
-const SIGN_IN = gql`
-  mutation signIn($email: String!, $password: String!) {
-    signIn(email: $email, password: $password)
-  }
-`;
+import { SIGN_IN } from '../apollo/mutation';
 
 const SignInForm = () => {
-  const [signIn, { loading, error }] = useMutation(SIGN_IN, {
+  const [signIn, { error }] = useMutation(SIGN_IN, {
     onCompleted: (data) => {
       localStorage.setItem('token', data.signIn);
 
