@@ -1,17 +1,15 @@
 import { useQuery } from '@apollo/client';
 import { memo, useEffect } from 'react';
-import { GET_ME } from '../apollo/query';
 
+import { GET_MY_NOTES } from '../apollo/query';
 import NoteItem from '../components/NoteItem';
 
-const NotesPage = () => {
-  const { data } = useQuery(GET_ME);
+const Notes = () => {
+  const { data } = useQuery(GET_MY_NOTES);
 
   useEffect(() => {
     document.title = 'Notes - T2Pad';
   }, []);
-
-  console.log(data);
 
   return (
     <div className="max-w-7xl px-4 mx-auto mt-8">
@@ -22,4 +20,4 @@ const NotesPage = () => {
   );
 };
 
-export default memo(NotesPage);
+export default memo(Notes);

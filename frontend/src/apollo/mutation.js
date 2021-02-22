@@ -29,3 +29,22 @@ export const CREATE_NOTE = gql`
     }
   }
 `;
+
+export const UPDATE_NOTE = gql`
+  mutation updateNote($id: ID!, $content: String!) {
+    updateNote(id: $id, content: $content) {
+      id
+      content
+      author {
+        id
+        nickname
+      }
+      likeCount
+      likedBy {
+        id
+        nickname
+      }
+      createdAt
+    }
+  }
+`;

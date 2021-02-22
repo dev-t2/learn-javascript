@@ -4,28 +4,30 @@ import { useReactiveVar } from '@apollo/client';
 
 import { isLoggedInVar } from '../apollo';
 import Layout from '../components/Layout';
-import HomePage from './home';
-import SignUpPage from './signup';
-import CreatePage from './create';
-import NotesPage from './notes';
-import LikesPage from './likes';
-import NotePage from './note';
+import Home from './home';
+import SignUp from './signup';
+import Create from './create';
+import Notes from './notes';
+import Likes from './likes';
+import Note from './note';
+import Update from './update';
 
-const Pages = () => {
+const Index = () => {
   const isLoggedIn = useReactiveVar(isLoggedInVar);
 
   return (
     <Router>
       <Layout>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={Home} />
 
         {isLoggedIn ? (
           <>
-            <Route exact path="/signup" component={SignUpPage} />
-            <Route exact path="/create" component={CreatePage} />
-            <Route exact path="/notes" component={NotesPage} />
-            <Route exact path="/likes" component={LikesPage} />
-            <Route path="/note/:id" component={NotePage} />
+            <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/create" component={Create} />
+            <Route exact path="/notes" component={Notes} />
+            <Route exact path="/likes" component={Likes} />
+            <Route path="/note/:id" component={Note} />
+            <Route path="/update/:id" component={Update} />
           </>
         ) : (
           <Redirect to="/" />
@@ -35,4 +37,4 @@ const Pages = () => {
   );
 };
 
-export default memo(Pages);
+export default memo(Index);

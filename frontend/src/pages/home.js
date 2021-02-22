@@ -4,7 +4,7 @@ import { memo, useEffect } from 'react';
 import { isLoggedInVar } from '../apollo';
 import SignInForm from '../components/SignInForm';
 
-const HomePage = () => {
+const Home = () => {
   const isLoggedIn = useReactiveVar(isLoggedInVar);
 
   useEffect(() => {
@@ -49,4 +49,4 @@ const HomePage = () => {
   );
 };
 
-export default memo(HomePage);
+export default memo(Home);

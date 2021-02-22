@@ -4,13 +4,15 @@ import { useQuery } from '@apollo/client';
 import { GET_NOTE } from '../apollo/query';
 import NoteItem from '../components/NoteItem';
 
-const NotePage = ({ match }) => {
+const Note = ({ match }) => {
   const id = match.params.id;
-  const { loading, data } = useQuery(GET_NOTE, { variables: { id } });
+  const { data } = useQuery(GET_NOTE, { variables: { id } });
 
-  if (loading) return <div>Loading...</div>;
-
-  return <NoteItem note={data.note} />;
+  return (
+    <div className="max-w-7xl px-4 mx-auto mt-8">
+      <NoteItem note={data.note} />
+    </div>
+  );
 };
 
-export default memo(NotePage);
+export default memo(Note);

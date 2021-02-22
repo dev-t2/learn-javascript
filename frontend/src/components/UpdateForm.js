@@ -2,30 +2,34 @@ import { memo, useCallback, useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { withRouter } from 'react-router-dom';
 
-import { CREATE_NOTE } from '../apollo/mutation';
+import { UPDATE_NOTE } from '../apollo/mutation';
 import { GET_MY_NOTES } from '../apollo/query';
 
-const NoteForm = ({ history }) => {
-  const [createNote] = useMutation(CREATE_NOTE, {
+const UpdateForm = ({ history, id, content = '' }) => {
+  const [updateNote] = useMutation(UPDATE_NOTE, {
     refetchQueries: [{ query: GET_MY_NOTES }],
     onCompleted: () => {
-      history.push('/notes');
+      history.push(`/note/${id}`);
     },
   });
 
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(content);
+
+  console.log(id);
+  console.log(value);
 
   const onSubmit = useCallback(
     (e) => {
       e.preventDefault();
 
-      createNote({
+      updateNote({
         variables: {
+          id,
           content: value,
         },
       });
     },
-    [createNote, value]
+    [updateNote, id, value]
   );
 
   const onChange = useCallback((e) => {
@@ -47,7 +51,7 @@ const NoteForm = ({ history }) => {
             type="submit"
             className="bg-blue-800 px-7 py-3 mt-4 rounded-md text-white text-sm hover:bg-blue-900 focus:outline-none"
           >
-            CREATE
+            UPDATE
           </button>
         </div>
       </form>
@@ -55,4 +59,4 @@ const NoteForm = ({ history }) => {
   );
 };
 
-export default withRouter(memo(NoteForm));
+export default withRouter(memo(UpdateForm));

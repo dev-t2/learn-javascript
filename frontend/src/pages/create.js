@@ -2,7 +2,7 @@ import { memo, useEffect } from 'react';
 
 import NoteForm from '../components/NoteForm';
 
-const CreatePage = () => {
+const Create = () => {
   useEffect(() => {
     document.title = 'Create -T2Pad';
   }, []);
@@ -10,4 +10,4 @@ const CreatePage = () => {
   return <NoteForm />;
 };
 
-export default memo(CreatePage);
+export default memo(Create);

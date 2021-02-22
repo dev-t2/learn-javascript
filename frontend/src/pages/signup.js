@@ -1,7 +1,7 @@
 import { memo, useEffect } from 'react';
 import SignUpForm from '../components/SignUpForm';
 
-const SignUpPage = ({ history }) => {
+const SignUp = ({ history }) => {
   useEffect(() => {
     document.title = 'SignUp - T2Pad';
   }, []);
@@ -20,4 +20,4 @@ const SignUpPage = ({ history }) => {
   );
 };
 
-export default memo(SignUpPage);
+export default memo(SignUp);
