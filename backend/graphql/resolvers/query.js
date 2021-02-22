@@ -1,6 +1,6 @@
 module.exports = {
   users: async (parent, args, { models, user }) => {
-    // if (!user) throw new AuthenticationError('You must be signed in to search users');
+    if (!user) throw new AuthenticationError('You must be signed in to search users');
 
     try {
       return await models.User.find().limit(100);
@@ -19,6 +19,16 @@ module.exports = {
     }
   },
 
+  me: async (parent, args, { models, user }) => {
+    if (!user) throw new AuthenticationError('You must be signed in to search me');
+
+    try {
+      return await models.User.findById(user.id);
+    } catch (e) {
+      console.error(e);
+    }
+  },
+
   notes: async (parent, args, { models, user }) => {
     if (!user) throw new AuthenticationError('You must be signed in to search notes');
 
@@ -31,8 +41,8 @@ module.exports = {
     }
   },
 
-  note: async (parent, { id }, { models }) => {
-    // if (!user) throw new AuthenticationError('You must be signed in to search note');
+  note: async (parent, { id }, { models, user }) => {
+    if (!user) throw new AuthenticationError('You must be signed in to search note');
 
     try {
       return await models.Note.findById(id);
@@ -43,7 +53,9 @@ module.exports = {
     }
   },
 
-  noteFeed: async (parent, { cursor, limit = 10 }, { models }) => {
+  noteFeed: async (parent, { cursor, limit = 10 }, { models, user }) => {
+    if (!user) throw new AuthenticationError('You must be signed in to search note feed');
+
     let isNextPage = false;
     let cursorQuery = {};
 

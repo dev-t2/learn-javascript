@@ -31,6 +31,7 @@ module.exports = gql`
   type Query {
     users: [User!]
     user(nickname: String!): User
+    me: User!
 
     notes: [Note!]
     note(id: ID!): Note

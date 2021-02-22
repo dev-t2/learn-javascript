@@ -6,8 +6,8 @@ import { CREATE_NOTE } from '../apollo/mutation';
 
 const NoteForm = ({ history }) => {
   const [createNote] = useMutation(CREATE_NOTE, {
-    onCompleted: (data) => {
-      history.push(`note/${data.createNote.id}`);
+    onCompleted: () => {
+      history.push(`notes`);
     },
   });
 

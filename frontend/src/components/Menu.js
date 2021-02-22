@@ -1,13 +1,10 @@
 import { memo } from 'react';
 
 const Menu = ({ isMenu, onClick }) => (
-  <button
-    className="sm:hidden w-16 text-white hover:bg-blue-900 p-2 rounded-md focus:outline-none"
-    onClick={onClick}
-  >
+  <button className="sm:hidden w-16 text-white focus:outline-none" onClick={onClick}>
     {isMenu ? (
       <svg
-        className="block h-6"
+        className="block h-10 hover:bg-blue-900 p-2 rounded-md"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -22,7 +19,7 @@ const Menu = ({ isMenu, onClick }) => (
       </svg>
     ) : (
       <svg
-        className="block h-6"
+        className="block h-10 hover:bg-blue-900 p-2 rounded-md"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"

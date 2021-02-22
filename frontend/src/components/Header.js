@@ -6,8 +6,6 @@ import Logout from './Logout';
 import Menu from './Menu';
 import Nav from './Nav';
 
-const menuItems = ['Notes', 'Likes'];
-
 const Header = ({ title, navItems }) => {
   const [isMenu, setIsMenu] = useState(false);
 
@@ -30,7 +28,7 @@ const Header = ({ title, navItems }) => {
 
       {isMenu && (
         <div className="sm:hidden p-2 pb-6 space-y-1">
-          {menuItems.map((item, index) => (
+          {navItems.map((item, index) => (
             <Link key={index} className="menu-link" to={`/${item}`}>
               {item}
             </Link>
