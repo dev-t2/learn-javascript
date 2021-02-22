@@ -1,8 +1,6 @@
-import { useReactiveVar } from '@apollo/client';
 import { memo, useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { isLoggedInVar } from '../apollo';
 import Logo from './Logo';
 import Logout from './Logout';
 import Menu from './Menu';
@@ -11,10 +9,6 @@ import Nav from './Nav';
 const menuItems = ['Notes', 'Likes'];
 
 const Header = ({ title, navItems }) => {
-  const isLoggedIn = useReactiveVar(isLoggedInVar);
-
-  console.log(isLoggedIn);
-
   const [isMenu, setIsMenu] = useState(false);
 
   const onClick = useCallback(() => {

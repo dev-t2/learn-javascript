@@ -1,6 +1,16 @@
-import { memo } from 'react';
+import { useReactiveVar } from '@apollo/client';
+import { memo, useEffect } from 'react';
+
+import { isLoggedInVar } from '../apollo';
+import SignInForm from '../components/SignInForm';
 
 const HomePage = () => {
+  const isLoggedIn = useReactiveVar(isLoggedInVar);
+
+  useEffect(() => {
+    document.title = 'T2Pad';
+  }, []);
+
   return (
     <section>
       <div className="max-w-7xl px-4 mx-auto mt-8 sm:mt-12 flex flex-col">
@@ -33,6 +43,8 @@ const HomePage = () => {
           <img className="h-64 md:h-80 lg:h-96" src="images/devices.svg" alt="device" />
         </div>
       </div>
+
+      {isLoggedIn ? null : <SignInForm />}
     </section>
   );
 };

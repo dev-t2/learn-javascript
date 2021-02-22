@@ -9,7 +9,7 @@ const SIGN_UP = gql`
 `;
 
 const SignUpForm = ({ history }) => {
-  const [signUp, { loading }] = useMutation(SIGN_UP, {
+  const [signUp] = useMutation(SIGN_UP, {
     onCompleted: (data) => {
       localStorage.setItem('token', data.signUp);
 
@@ -111,7 +111,7 @@ const SignUpForm = ({ history }) => {
         <div className="mt-12">
           <button
             type="submit"
-            className="bg-blue-800 w-full py-3 rounded-md font-medium text-white hover:bg-blue-900 focus:outline-none"
+            className="bg-blue-800 w-full py-3 rounded-md text-white hover:bg-blue-900 focus:outline-none"
           >
             SUBMIT
           </button>
