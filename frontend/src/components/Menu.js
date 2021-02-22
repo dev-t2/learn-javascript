@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 const Menu = ({ isMenu, onClick }) => (
   <button
-    className="sm:hidden text-white hover:bg-blue-900 p-2 rounded-md focus:outline-none"
+    className="sm:hidden w-16 text-white hover:bg-blue-900 p-2 rounded-md focus:outline-none"
     onClick={onClick}
   >
     {isMenu ? (

@@ -28,22 +28,10 @@ const Header = ({ title, navItems }) => {
           <Logo title={title} />
           <Nav items={navItems} />
 
-          <button className="block sm:hidden">
-            <img
-              class="h-6 rounded-full"
-              src="https://www.gravatar.com/avatar/bafdc5cd1958bfacf19d28e152c9f3aa.jpg?d=identicon"
-              alt=""
-            />
-          </button>
+          <button className="block sm:hidden w-16 header-logout">Logout</button>
         </div>
 
-        <button className="hidden sm:block">
-          <img
-            class="h-8 rounded-full"
-            src="https://www.gravatar.com/avatar/bafdc5cd1958bfacf19d28e152c9f3aa.jpg?d=identicon"
-            alt=""
-          />
-        </button>
+        <button className="hidden sm:block w-16 header-logout">Logout</button>
       </div>
 
       {isMenu && (
