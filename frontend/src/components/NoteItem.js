@@ -1,8 +1,14 @@
 import { memo, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { format } from 'date-fns';
+import { useQuery } from '@apollo/client';
+
+import { GET_MY_NOTES } from '../apollo/query';
+import { Link } from 'react-router-dom';
 
 const NoteItem = ({ note }) => {
+  const { data } = useQuery(GET_MY_NOTES);
+  const isAuthor = useMemo(() => data.me.id === note.author.id, [note.author.id, data.me.id]);
   const createdAt = useMemo(() => format(new Date(note.createdAt), 'yyyy-MM-dd'), [note.createdAt]);
 
   return (
@@ -18,7 +24,10 @@ const NoteItem = ({ note }) => {
           </div>
 
           <div>
-            <div className="text-gray-900">{note.author.nickname}</div>
+            <div className="text-gray-900">
+              {note.author.nickname}
+              {isAuthor && <Link to={`/update/${note.id}`}>(Edit)</Link>}
+            </div>
 
             <div className="text-xs text-gray-600">{createdAt}</div>
           </div>
@@ -27,9 +36,10 @@ const NoteItem = ({ note }) => {
         <div className="text-xs text-gray-600">Likes: {note.likeCount}</div>
       </div>
 
-      <div className="max-h-40 truncate">
-        <ReactMarkdown>{note.content}</ReactMarkdown>
-      </div>
+      <ReactMarkdown
+        className="max-h-48 break-all whitespace-pre-line overflow-y-hidden"
+        children={note.content}
+      />
     </article>
   );
 };

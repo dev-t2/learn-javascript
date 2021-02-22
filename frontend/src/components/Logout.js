@@ -15,7 +15,10 @@ const Logout = ({ history, className }) => {
   }, [history]);
 
   return (
-    <button className={`w-16 header-logout ${className}`} onClick={onClick}>
+    <button
+      className={`w-20 h-10 header-logout flex justify-center items-center ${className}`}
+      onClick={onClick}
+    >
       Logout
     </button>
   );
