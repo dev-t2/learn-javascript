@@ -6,7 +6,13 @@ import Logout from './Logout';
 import Menu from './Menu';
 import Nav from './Nav';
 
-const Header = ({ title, navItems }) => {
+const menuItems = [
+  { name: 'Create Note', link: 'create' },
+  { name: 'My Notes', link: 'notes' },
+  { name: 'My Likes', link: 'likes' },
+];
+
+const Header = ({ title }) => {
   const [isMenu, setIsMenu] = useState(false);
 
   const onClick = useCallback(() => {
@@ -19,7 +25,7 @@ const Header = ({ title, navItems }) => {
         <div className="flex-1 flex items-center justify-between sm:justify-start">
           <Menu isMenu={isMenu} onClick={onClick} />
           <Logo title={title} />
-          <Nav items={navItems} />
+          <Nav items={menuItems} />
           <Logout className="block sm:hidden" />
         </div>
 
@@ -27,10 +33,10 @@ const Header = ({ title, navItems }) => {
       </div>
 
       {isMenu && (
-        <div className="sm:hidden p-2 pb-6 space-y-1">
-          {navItems.map((item, index) => (
-            <Link key={index} className="menu-link" to={`/${item}`}>
-              {item}
+        <div className="sm:hidden px-4 py-2 pb-6 space-y-1">
+          {menuItems.map((item, index) => (
+            <Link key={index} className="menu-link" to={`/${item.link}`}>
+              {item.name}
             </Link>
           ))}
         </div>

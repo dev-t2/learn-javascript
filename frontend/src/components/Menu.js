@@ -1,37 +1,16 @@
 import { memo } from 'react';
+import { IoClose } from 'react-icons/io5';
+import { BiMenu } from 'react-icons/bi';
 
 const Menu = ({ isMenu, onClick }) => (
-  <button className="sm:hidden w-20 text-white focus:outline-none" onClick={onClick}>
+  <button
+    className="sm:hidden focus:outline-none hover:bg-blue-900 p-1 rounded-md"
+    onClick={onClick}
+  >
     {isMenu ? (
-      <svg
-        className="block h-10 hover:bg-blue-900 p-2 rounded-md"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
+      <IoClose className="text-white text-2xl sm:text-3xl" />
     ) : (
-      <svg
-        className="block h-10 hover:bg-blue-900 p-2 rounded-md"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
+      <BiMenu className="text-white text-2xl sm:text-3xl" />
     )}
   </button>
 );
