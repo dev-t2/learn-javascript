@@ -21,7 +21,7 @@ const Header = ({ title }) => {
 
   return (
     <header className="bg-blue-800">
-      <div className="h-14 sm:h-16 max-w-5xl mx-auto px-4 flex items-center justify-between">
+      <div className="h-14 sm:h-16 max-w-2xl mx-auto px-4 flex items-center justify-between">
         <div className="flex-1 flex items-center justify-between sm:justify-start">
           <Menu isMenu={isMenu} onClick={onClick} />
           <Logo title={title} />

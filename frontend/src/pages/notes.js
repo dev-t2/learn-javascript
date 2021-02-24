@@ -12,7 +12,7 @@ const Notes = () => {
   }, []);
 
   return (
-    <div className="max-w-5xl px-4 mx-auto mt-8">
+    <div className="max-w-2xl mt-4 p-4 mx-auto space-y-4">
       {data?.me?.notes?.map((note) => (
         <NoteItem key={note.id} note={note} />
       ))}
