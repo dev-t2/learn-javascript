@@ -4,5 +4,5 @@
 - Visual Studio Code: https://code.visualstudio.com
 - ts-node: https://typestrong.org/ts-node
 - ESLint: https://eslint.org
-- React: https://ko.reactjs.org
+- ReactJS: https://ko.reactjs.org
   - CRA: https://ko.reactjs.org/docs/static-type-checking.html#typescript
