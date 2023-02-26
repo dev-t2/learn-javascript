@@ -6,9 +6,7 @@
     "build": "parcel build ./index.html"
   },
   "license": "MIT",
-  "dependencies": {
-    "lodash": "^4.17.21"
-  },
+  "dependencies": {},
   "devDependencies": {
     "parcel": "^2.8.3"
   }
