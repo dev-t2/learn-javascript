@@ -12,3 +12,5 @@
 // import './1-data/10-type';
 
 /* 2. Operator */
+
+import './2-operator/01-arithmetic';
