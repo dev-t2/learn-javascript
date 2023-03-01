@@ -28,7 +28,7 @@ const function4 = function () {
   console.log('Function 4');
 };
 
-const function5 = function (a) {
+const function5 = (a) => {
   console.log(a);
 
   a();
