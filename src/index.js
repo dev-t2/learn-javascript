@@ -1,4 +1,4 @@
-/* 1. JavaScript Data Type */
+/* 1. JavaScript Data */
 
 // import './1-data/01-string';
 // import './1-data/02-number';
@@ -9,4 +9,6 @@
 // import './1-data/07-object';
 // import './1-data/08-function';
 // import './1-data/09-conversion';
-import './1-data/10-type';
+// import './1-data/10-type';
+
+/* 2. Operator */
