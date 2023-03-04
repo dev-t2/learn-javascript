@@ -16,4 +16,5 @@
 // import './2-operator/01-arithmetic';
 // import './2-operator/02-assignment';
 // import './2-operator/03-incremental';
-import './2-operator/04-negation';
+// import './2-operator/04-negation';
+import './2-operator/05-comparison';
