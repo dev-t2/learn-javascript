@@ -13,4 +13,5 @@
 
 /* 2. Operator */
 
-import './2-operator/01-arithmetic';
+// import './2-operator/01-arithmetic';
+import './2-operator/02-assignment';
