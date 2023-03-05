@@ -21,4 +21,5 @@
 // import './2-operator/06-logical';
 // import './2-operator/07-nullish';
 // import './2-operator/08-ternary';
-import './2-operator/09-spread';
+// import './2-operator/09-spread';
+import './2-operator/10-destructuring';
