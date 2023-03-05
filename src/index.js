@@ -18,4 +18,5 @@
 // import './2-operator/03-incremental';
 // import './2-operator/04-negation';
 // import './2-operator/05-comparison';
-import './2-operator/06-logical';
+// import './2-operator/06-logical';
+import './2-operator/07-nullish';
