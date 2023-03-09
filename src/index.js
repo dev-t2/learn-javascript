@@ -24,4 +24,5 @@
 // import './2-operator/09-spread';
 // import './2-operator/10-destructuring';
 // import './2-operator/11-optional-chaining';
-import './2-operator/12-if';
+// import './2-operator/12-if';
+import './2-operator/13-switch';
