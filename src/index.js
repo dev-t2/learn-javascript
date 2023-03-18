@@ -30,4 +30,5 @@
 // import './2-operator/15.while';
 
 // import './3-function/01-hoisting';
-import './3-function/02-return';
+// import './3-function/02-return';
+import './3-function/03-parameter';
