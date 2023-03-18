@@ -27,4 +27,6 @@
 // import './2-operator/12-if';
 // import './2-operator/13-switch';
 // import './2-operator/14-for';
-import './2-operator/15.while';
+// import './2-operator/15.while';
+
+import './3-function/01-hoisting';
