@@ -1,4 +1,4 @@
-/* 1. JavaScript Data */
+/* 1. Data  */
 // import './1-data/01-string';
 // import './1-data/02-number';
 // import './1-data/03-boolean';
@@ -10,7 +10,7 @@
 // import './1-data/09-conversion';
 // import './1-data/10-type';
 
-/* 2. Operator */
+/* 2. Operator  */
 // import './2-operator/01-arithmetic';
 // import './2-operator/02-assignment';
 // import './2-operator/03-incremental';
@@ -27,7 +27,7 @@
 // import './2-operator/14-for';
 // import './2-operator/15.while';
 
-/* 3. Function */
+/* 3. Function  */
 // import './3-function/01-hoisting';
 // import './3-function/02-return';
 // import './3-function/03-parameter';
@@ -38,9 +38,12 @@
 // import './3-function/08-scheduling';
 // import './3-function/09.this';
 
-/* 4. Class */
+/* 4. Class  */
 // import './4-class/01-prototype';
 // import './4-class/02-es6';
 // import './4-class/03-static';
 // import './4-class/04-inheritance';
-import './4-class/05-instanceof';
+// import './4-class/05-instanceof';
+
+/* 5. Standard  */
+import './5-standard/01-string';
