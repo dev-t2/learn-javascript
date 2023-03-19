@@ -39,4 +39,5 @@
 // import './3-function/09.this';
 
 /* 4. Class */
-import './4-class/01-prototype';
+// import './4-class/01-prototype';
+import './4-class/02-es6';
