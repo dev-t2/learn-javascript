@@ -17,6 +17,12 @@ class Vehicle {
   }
 }
 
+const vehicle = new Vehicle();
+
+console.log(vehicle);
+
+console.log('');
+
 class Bicycle extends Vehicle {
   constructor(price = 100, acceleration) {
     super(acceleration);
@@ -32,8 +38,6 @@ bicycle.accelerate();
 bicycle.accelerate();
 
 console.log(bicycle);
-console.log(bicycle instanceof Bicycle);
-console.log(bicycle instanceof Vehicle);
 
 console.log('');
 
@@ -64,18 +68,12 @@ carA.accelerate();
 carA.accelerate();
 
 console.log(carA);
-console.log(carA instanceof Car);
-console.log(carA instanceof Bicycle);
-console.log(carA instanceof Vehicle);
 
 console.log('');
 
 carB.accelerate();
 
 console.log(carB);
-console.log(carB instanceof Car);
-console.log(carB instanceof Bicycle);
-console.log(carB instanceof Vehicle);
 
 console.log('');
 
@@ -91,5 +89,3 @@ class Boat extends Vehicle {
 const boat = new Boat(10000, 5);
 
 console.log(boat);
-console.log(boat instanceof Boat);
-console.log(boat instanceof Vehicle);
