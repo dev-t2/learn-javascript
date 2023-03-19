@@ -35,4 +35,5 @@
 // import './3-function/05-iife';
 // import './3-function/06-callback';
 // import './3-function/07-recursive';
-import './3-function/08-scheduling';
+// import './3-function/08-scheduling';
+import './3-function/09.this';
