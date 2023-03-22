@@ -46,4 +46,5 @@
 // import './4-class/05-instanceof';
 
 /* 5. Standard Built-in Objects */
-import './5-standard/01-string';
+// import './5-standard/01-string';
+import './5-standard/02-number';
