@@ -47,4 +47,5 @@
 
 /* 5. Standard Built-in Objects */
 // import './5-standard/01-string';
-import './5-standard/02-number';
+// import './5-standard/02-number';
+import './5-standard/03-math';
