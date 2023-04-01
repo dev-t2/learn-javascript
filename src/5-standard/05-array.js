@@ -44,6 +44,28 @@ console.log(index);
 
 console.log('');
 
+const updatedUsers = users.map((user) => {
+  return { ...user, email: null };
+});
+
+console.log(updatedUsers);
+
+console.log('');
+
+const totalAge = users.reduce((result, user) => result + user.age, 0);
+const averageAge = (totalAge / users.length).toFixed(1);
+
+console.log(`totalAge: ${totalAge}`);
+console.log(`averageAge: ${averageAge}`);
+
+console.log('');
+
+const userNames = users.reduce((result, user) => [...result, user.name], []).join(', ');
+
+console.log(userNames);
+
+console.log('');
+
 const array3 = [1, 2, [3, 4, [5, 6, [7, 8]]]];
 
 console.log(array3.flat());
@@ -75,3 +97,24 @@ console.log('');
 
 console.log(`includes: ${users.includes({ id: 3, name: 'User C', age: 35 })}`);
 console.log(`includes: ${users.includes(users[2])}`);
+
+console.log('');
+
+console.log(`join: ${array4.join()}`);
+console.log(`join: ${array4.join(', ')}`);
+console.log(`join: ${array4.join(' / ')}`);
+
+console.log('');
+
+const array5 = [1, 2, 3];
+
+console.log(array5);
+console.log(`pop: ${array5.pop()}`);
+console.log(array5);
+
+console.log('');
+
+console.log(`push: ${array5.push(3)}`);
+console.log(array5);
+console.log(`push: ${array5.push(4, 5)}`);
+console.log(array5);
