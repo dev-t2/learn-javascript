@@ -24,9 +24,9 @@ console.log(`random: ${Math.random()}`);
 
 console.log('');
 
-const random = (min = 0, max = 1) => {
+const getRandom = (min = 0, max = 1) => {
   return Math.random() * (max - min) + min;
 };
 
-console.log(`random function: ${random()}`);
-console.log(`random function: ${random(10, 20)}`);
+console.log(`getRandom: ${getRandom()}`);
+console.log(`getRandom: ${getRandom(10, 20)}`);
