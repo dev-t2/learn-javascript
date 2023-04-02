@@ -8,7 +8,7 @@
 // import './1-data/07-object';
 // import './1-data/08-function';
 // import './1-data/09-conversion';
-// import './1-data/10-type';
+import './1-data/10-type';
 
 /* 2. Operators and Phrases */
 // import './2-operators/01-arithmetic';
@@ -60,4 +60,4 @@
 // import './6-asynchronous/03-promise';
 // import './6-asynchronous/04-reject';
 // import './6-asynchronous/05-async-await';
-import './6-asynchronous/06-try-catch';
+// import './6-asynchronous/06-try-catch';

@@ -6,6 +6,8 @@ if (false) {
   console.log(false);
 }
 
+console.log('');
+
 if (123) {
   console.log(123);
 }
@@ -22,6 +24,8 @@ if (0n) {
   console.log(-0);
 }
 
+console.log('');
+
 if ('0') {
   console.log('0');
 }
@@ -29,6 +33,8 @@ if ('0') {
 if ('') {
   console.log('');
 }
+
+console.log('');
 
 if (null) {
   console.log(null);
@@ -42,14 +48,14 @@ if (NaN) {
   console.log(undefined);
 }
 
-const a = [1, 2];
+const array1 = [1, 2];
 
-if (a) {
-  console.log({ a });
+if (array1) {
+  console.log(array1);
 }
 
-const b = [];
+const array2 = [];
 
-if (b.length) {
-  console.log({ b });
+if (array2.length) {
+  console.log({ array2 });
 }

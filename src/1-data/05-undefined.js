@@ -3,10 +3,11 @@ let b;
 
 console.log({ a, b });
 console.log(typeof a);
+console.log(typeof b);
 
-const user = {
-  name: 'dev-t2',
-};
+console.log('');
+
+const user = { id: 1, name: 'User A' };
 
 console.log(user.name);
 console.log(user.email);

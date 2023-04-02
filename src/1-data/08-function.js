@@ -6,14 +6,21 @@ console.log(function1);
 
 function1();
 
+console.log('');
+
 function function2() {
   return 123;
 }
 
 console.log(function2);
 console.log(typeof function2);
+
+console.log('');
+
 console.log(function2());
 console.log(typeof function2());
+
+console.log('');
 
 const function3 = function () {
   return 456;
@@ -21,8 +28,13 @@ const function3 = function () {
 
 console.log(function3);
 console.log(typeof function3);
+
+console.log('');
+
 console.log(function3());
 console.log(typeof function3());
+
+console.log('');
 
 const function4 = function () {
   console.log('Function 4');
