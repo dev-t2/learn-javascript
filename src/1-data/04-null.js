@@ -1,4 +1,2 @@
-const a = null;
-
-console.log(a);
-console.log(typeof a);
+console.log(null);
+console.log(typeof null);
