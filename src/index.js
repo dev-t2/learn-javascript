@@ -55,4 +55,5 @@
 // import './5-standard/07.json';
 
 /* 6. Asynchronous */
-import './6-asynchronous/01-callback';
+// import './6-asynchronous/01-callback';
+import './6-asynchronous/02-promise';
