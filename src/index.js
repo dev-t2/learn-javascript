@@ -12,19 +12,16 @@
 /* 2. Operators and Phrases */
 import './2-operators/01-arithmetic';
 // import './2-operators/02-assignment';
-// import './2-operators/03-incremental';
-// import './2-operators/04-negation';
-// import './2-operators/05-comparison';
-// import './2-operators/06-logical';
-// import './2-operators/07-nullish';
-// import './2-operators/08-ternary';
-// import './2-operators/09-spread';
-// import './2-operators/10-destructuring';
-// import './2-operators/11-optional-chaining';
-// import './2-operators/12-if';
-// import './2-operators/13-switch';
-// import './2-operators/14-for';
-// import './2-operators/15-while';
+// import './2-operators/03-negation';
+// import './2-operators/04-comparison';
+// import './2-operators/05-logical';
+// import './2-operators/06-nullish';
+// import './2-operators/07-ternary';
+// import './2-operators/08-spread';
+// import './2-operators/09-destructuring';
+// import './2-operators/10-optional-chaining';
+// import './2-operators/11-if';
+// import './2-operators/12-for';
 
 /* 3. Function */
 // import './3-function/01-hoisting';
