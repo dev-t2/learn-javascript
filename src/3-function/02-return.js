@@ -23,7 +23,7 @@ console.log('');
 
 const func4 = function (num) {
   if (typeof num !== 'number') {
-    console.log({ num });
+    console.log(num);
 
     return 0;
   }

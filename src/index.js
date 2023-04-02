@@ -25,7 +25,7 @@
 // import './2-operators/12-if';
 // import './2-operators/13-switch';
 // import './2-operators/14-for';
-import './2-operators/15-while';
+// import './2-operators/15-while';
 
 /* 3. Function */
 // import './3-function/01-hoisting';
@@ -36,7 +36,7 @@ import './2-operators/15-while';
 // import './3-function/06-callback';
 // import './3-function/07-recursive';
 // import './3-function/08-scheduling';
-// import './3-function/09-this';
+import './3-function/09-this';
 
 /* 4. Class */
 // import './4-class/01-prototype';

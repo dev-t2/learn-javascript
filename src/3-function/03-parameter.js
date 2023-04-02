@@ -34,6 +34,8 @@ const func4 = function (numbers) {
 
 console.log(func4(numbers));
 
+console.log('');
+
 const func5 = function ([_, b]) {
   return b;
 };
