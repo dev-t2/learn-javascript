@@ -1,33 +1,29 @@
-const number1 = 10;
-const number2 = -10;
+const num1 = 10;
+const num2 = -10;
 
-console.log(number1 + number2);
-
-console.log('');
-
-const number3 = 3.14;
-
-console.log({ number3 });
+console.log(`num1: ${num1}`);
+console.log(`num2: ${num2}`);
+console.log(`num1 + num2: ${num1 + num2}`);
 
 console.log('');
 
-const number4 = 10 + undefined;
+const num3 = 3.14;
 
-console.log({ number4 });
-console.log(typeof number4);
-
-console.log('');
-
-const number5 = 0.1 + 0.2;
-
-console.log({ number5 });
+console.log(`num3: ${num3}`);
 
 console.log('');
 
-console.log(number5.toFixed(1));
-console.log(typeof number5.toFixed(1));
+const num4 = 10 + undefined;
+
+console.log(`num4: ${num4}`);
+console.log(`typeof num4: ${typeof num4}`);
 
 console.log('');
 
-console.log(Number(number5.toFixed(1)));
-console.log(typeof Number(number5.toFixed(1)));
+const num5 = 0.1 + 0.2;
+
+console.log(`num5: ${num5}`);
+console.log(`num5.toFixed(1): ${num5.toFixed(1)}`);
+console.log(`typeof num5.toFixed(1): ${typeof num5.toFixed(1)}`);
+console.log(`Number(num5.toFixed(1)): ${Number(num5.toFixed(1))}`);
+console.log(`typeof Number(num5.toFixed(1)): ${typeof Number(num5.toFixed(1))}`);
