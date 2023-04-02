@@ -25,5 +25,8 @@ const userB = { id: 2 };
 
 console.log(User.isUser(userA));
 // console.log(userA.isUser());
+
+console.log('');
+
 // console.log(User.getName());
 console.log(User.isUser(userB));

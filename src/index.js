@@ -36,14 +36,14 @@
 // import './3-function/06-callback';
 // import './3-function/07-recursive';
 // import './3-function/08-scheduling';
-import './3-function/09-this';
+// import './3-function/09-this';
 
 /* 4. Class */
 // import './4-class/01-prototype';
 // import './4-class/02-es6';
 // import './4-class/03-static';
 // import './4-class/04-inheritance';
-// import './4-class/05-instanceof';
+import './4-class/05-instanceof';
 
 /* 5. Standard Built-in Objects */
 // import './5-standard/01-string';

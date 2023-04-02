@@ -33,5 +33,7 @@ const userB = new User('User B');
 console.log(userA);
 console.log(userA.getName());
 
+console.log('');
+
 console.log(userB);
 console.log(userB.getName(0));
