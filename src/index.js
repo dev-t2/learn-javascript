@@ -30,9 +30,8 @@ import './2-operators/01-arithmetic';
 // import './3-function/04-arrow';
 // import './3-function/05-iife';
 // import './3-function/06-callback';
-// import './3-function/07-recursive';
-// import './3-function/08-scheduling';
-// import './3-function/09-this';
+// import './3-function/07-scheduling';
+// import './3-function/08-this';
 
 /* 4. Class */
 // import './4-class/01-prototype';
