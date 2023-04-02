@@ -48,14 +48,16 @@ if (NaN) {
   console.log(undefined);
 }
 
-const array1 = [1, 2];
+console.log('');
 
-if (array1) {
-  console.log(array1);
+const arr1 = [1, 2];
+
+if (arr1) {
+  console.log(arr1);
 }
 
-const array2 = [];
+const arr2 = [];
 
-if (array2.length) {
-  console.log({ array2 });
+if (arr2.length) {
+  console.log(arr2);
 }
