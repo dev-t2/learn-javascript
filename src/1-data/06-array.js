@@ -1,12 +1,13 @@
-const array1 = new Array(1, 2, 3, 4);
+const arr1 = new Array(1, 2, 3, 4);
 
-console.log(array1);
+console.log(arr1);
 
 console.log('');
 
-const array2 = [1, 2, 3, 4];
+const arr2 = [1, 2, 3, 4];
 
-console.log(array2);
-console.log(array2[0]);
-console.log(array2.length);
-console.log(array2[array2.length - 1]);
+console.log(arr2);
+console.log(`arr2[0]: ${arr2[0]}`);
+console.log(`arr2.length: ${arr2.length}`);
+console.log(`arr2[arr2.length - 1]: ${arr2[arr2.length - 1]}`);
+console.log(`arr2.at(-1): ${arr2.at(-1)}`);
