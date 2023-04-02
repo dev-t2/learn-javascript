@@ -1,49 +1,41 @@
-function function1() {
-  console.log('Function 1');
+function func1() {
+  console.log('func1');
 }
 
-console.log(function1);
+console.log(func1);
 
-function1();
+func1();
 
 console.log('');
 
-function function2() {
+function func2() {
   return 123;
 }
 
-console.log(function2);
-console.log(typeof function2);
+console.log(func2);
+console.log(`typeof func2: ${typeof func2}`);
+console.log(func2());
+console.log(`typeof func2(): ${typeof func2()}`);
 
 console.log('');
 
-console.log(function2());
-console.log(typeof function2());
-
-console.log('');
-
-const function3 = function () {
+const func3 = function () {
   return 456;
 };
 
-console.log(function3);
-console.log(typeof function3);
+console.log(func3);
+console.log(`typeof func3: ${typeof func3}`);
 
 console.log('');
 
-console.log(function3());
-console.log(typeof function3());
-
-console.log('');
-
-const function4 = function () {
-  console.log('Function 4');
+const func4 = function () {
+  console.log('func4');
 };
 
-const function5 = (a) => {
-  console.log(a);
+const func5 = (callback) => {
+  console.log(callback);
 
-  a();
+  callback();
 };
 
-function5(function4);
+func5(func4);
