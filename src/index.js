@@ -25,7 +25,7 @@
 // import './2-operators/12-if';
 // import './2-operators/13-switch';
 // import './2-operators/14-for';
-// import './2-operators/15.while';
+// import './2-operators/15-while';
 
 /* 3. Function */
 // import './3-function/01-hoisting';
@@ -36,7 +36,7 @@
 // import './3-function/06-callback';
 // import './3-function/07-recursive';
 // import './3-function/08-scheduling';
-// import './3-function/09.this';
+// import './3-function/09-this';
 
 /* 4. Class */
 // import './4-class/01-prototype';
@@ -52,10 +52,11 @@
 // import './5-standard/04-date';
 // import './5-standard/05-array';
 // import './5-standard/06-object';
-// import './5-standard/07.json';
+// import './5-standard/07-json';
 
 /* 6. Asynchronous */
 // import './6-asynchronous/01-callback';
-import './6-asynchronous/02-error';
+// import './6-asynchronous/02-error';
 // import './6-asynchronous/03-promise';
-// import './6-asynchronous/04-async-await';
+import './6-asynchronous/04-reject';
+// import './6-asynchronous/05-async-await';
