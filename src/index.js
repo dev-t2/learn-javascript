@@ -7,10 +7,10 @@
 // import './1-data/06-object';
 // import './1-data/07-function';
 // import './1-data/08-conversion';
-import './1-data/09-type';
+// import './1-data/09-type';
 
 /* 2. Operators and Phrases */
-// import './2-operators/01-arithmetic';
+import './2-operators/01-arithmetic';
 // import './2-operators/02-assignment';
 // import './2-operators/03-incremental';
 // import './2-operators/04-negation';
