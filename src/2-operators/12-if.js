@@ -9,5 +9,11 @@ const isPositive = (number) => {
 };
 
 console.log(isPositive(1));
+
+console.log('');
+
 console.log(isPositive(-1));
+
+console.log('');
+
 console.log(isPositive(0));

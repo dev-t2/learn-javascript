@@ -18,6 +18,8 @@ if (a || c) {
   console.log('a || c');
 }
 
+console.log('');
+
 console.log(true && false);
 console.log(1 && 0);
 console.log(1 && 2 && 0);
@@ -25,6 +27,8 @@ console.log(1 && 0 && 2);
 console.log(0 && 1 && 2);
 console.log('a' && 'b' && '');
 console.log('a' && 'b' && 'c');
+
+console.log('');
 
 console.log(false || true);
 console.log(0 || 1);

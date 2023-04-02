@@ -15,6 +15,15 @@ const getPrice = (fruit) => {
 };
 
 console.log(getPrice('apple'));
+
+console.log('');
+
 console.log(getPrice('banana'));
+
+console.log('');
+
 console.log(getPrice('cherry'));
+
+console.log('');
+
 console.log(getPrice('switch'));

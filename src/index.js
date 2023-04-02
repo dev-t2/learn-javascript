@@ -8,7 +8,7 @@
 // import './1-data/07-object';
 // import './1-data/08-function';
 // import './1-data/09-conversion';
-import './1-data/10-type';
+// import './1-data/10-type';
 
 /* 2. Operators and Phrases */
 // import './2-operators/01-arithmetic';
@@ -25,7 +25,7 @@ import './1-data/10-type';
 // import './2-operators/12-if';
 // import './2-operators/13-switch';
 // import './2-operators/14-for';
-// import './2-operators/15-while';
+import './2-operators/15-while';
 
 /* 3. Function */
 // import './3-function/01-hoisting';

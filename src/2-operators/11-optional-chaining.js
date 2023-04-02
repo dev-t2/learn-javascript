@@ -1,12 +1,16 @@
 const user1 = {
-  name: 'dev-t2',
+  name: 'User A',
 };
 
 console.log(user1.name);
 
+console.log('');
+
 const user2 = null;
 
 console.log(user2?.name);
+
+console.log('');
 
 const getName = (user) => {
   return user?.name || 'Not Found';

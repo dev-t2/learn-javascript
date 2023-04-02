@@ -1,5 +1,5 @@
 for (let i = 0; i < 10; i++) {
-  console.log({ i });
+  console.log(i);
 }
 
 console.log('');
@@ -13,7 +13,7 @@ for (let i = 9; i > -1; i--) {
     break;
   }
 
-  console.log({ i });
+  console.log(i);
 }
 
 console.log('');
