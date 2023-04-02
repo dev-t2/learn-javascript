@@ -1,4 +1,3 @@
-const string1 = 'World';
-const string2 = `Hello ${string1}`;
+const str = 'World';
 
-console.log(string2);
+console.log(`Hello ${str}`);

@@ -1,5 +1,5 @@
 /* 1. JavaScript Data */
-// import './1-data/01-string';
+import './1-data/01-string';
 // import './1-data/02-number';
 // import './1-data/03-boolean';
 // import './1-data/04-null';
