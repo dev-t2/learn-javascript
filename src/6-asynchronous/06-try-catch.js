@@ -12,13 +12,16 @@ const func = (number) => {
   });
 };
 
-func(3)
-  .then((res) => {
+const main = async () => {
+  try {
+    const res = await func(3);
+
     console.log(`Success: ${res}`);
-  })
-  .catch((err) => {
+  } catch (err) {
     console.error(`Error: ${err}`);
-  })
-  .finally(() => {
+  } finally {
     console.log('Finally');
-  });
+  }
+};
+
+main();

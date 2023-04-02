@@ -58,5 +58,6 @@
 // import './6-asynchronous/01-callback';
 // import './6-asynchronous/02-error';
 // import './6-asynchronous/03-promise';
-import './6-asynchronous/04-reject';
+// import './6-asynchronous/04-reject';
 // import './6-asynchronous/05-async-await';
+import './6-asynchronous/06-try-catch';

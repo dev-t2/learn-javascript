@@ -1,21 +1,23 @@
-const functionA = (number, callback, error) => {
+const func = (number, callback, error) => {
   setTimeout(() => {
     if (number >= 4) {
-      error();
+      error(number);
     } else {
       console.log(number);
 
-      callback();
+      callback(number);
     }
+
+    console.log('Finally');
   }, 1000);
 };
 
-functionA(
+func(
   3,
-  () => {
-    console.log('Success');
+  (res) => {
+    console.log(`Success: ${res}`);
   },
-  () => {
-    console.error('Error');
+  (err) => {
+    console.error(`Error: ${err}`);
   }
 );
