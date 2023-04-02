@@ -56,4 +56,5 @@
 
 /* 6. Asynchronous */
 // import './6-asynchronous/01-callback';
-import './6-asynchronous/02-promise';
+// import './6-asynchronous/02-promise';
+import './6-asynchronous/03-async-await';
