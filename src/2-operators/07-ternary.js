@@ -1,11 +1,9 @@
 const a = 4;
 
 if (a <= 5) {
-  console.log('true');
+  console.log(`a <= 5: ${a <= 5}`);
 } else {
-  console.log('false');
+  console.log(`a <= 5: ${a <= 5}`);
 }
 
-console.log('');
-
-console.log(a <= 5 ? 'true' : 'false');
+console.log(`a <= 5 ? true : false => ${a <= 5 ? true : false}`);
