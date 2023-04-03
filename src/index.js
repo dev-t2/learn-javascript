@@ -15,7 +15,7 @@
 // import './2-operators/03-negation';
 // import './2-operators/04-comparison';
 // import './2-operators/05-logical';
-// import './2-operators/06-nullish';
+// import './2-operators/06-nullish-coalescing';
 // import './2-operators/07-ternary';
 // import './2-operators/08-spread';
 // import './2-operators/09-destructuring';
