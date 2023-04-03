@@ -10,8 +10,8 @@
 // import './1-data/09-type';
 
 /* 2. Operators and Phrases */
-import './2-operators/01-arithmetic';
-// import './2-operators/02-assignment';
+// import './2-operators/01-arithmetic';
+import './2-operators/02-assignment';
 // import './2-operators/03-negation';
 // import './2-operators/04-comparison';
 // import './2-operators/05-logical';
