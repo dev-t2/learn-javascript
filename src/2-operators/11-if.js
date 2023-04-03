@@ -4,16 +4,10 @@ const isPositive = (number) => {
   } else if (number < 0) {
     return 'Negative Number';
   } else {
-    return `${number}`;
+    return number;
   }
 };
 
-console.log(isPositive(1));
-
-console.log('');
-
-console.log(isPositive(-1));
-
-console.log('');
-
-console.log(isPositive(0));
+console.log(`isPositive(1): ${isPositive(1)}`);
+console.log(`isPositive(-1): ${isPositive(-1)}`);
+console.log(`isPositive(0): ${isPositive(0)}`);
