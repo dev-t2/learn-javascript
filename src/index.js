@@ -16,8 +16,8 @@
 // import './2-operators/04-comparison';
 // import './2-operators/05-logical';
 // import './2-operators/06-nullish';
-import './2-operators/07-ternary';
-// import './2-operators/08-spread';
+// import './2-operators/07-ternary';
+import './2-operators/08-spread';
 // import './2-operators/09-destructuring';
 // import './2-operators/10-optional-chaining';
 // import './2-operators/11-if';
