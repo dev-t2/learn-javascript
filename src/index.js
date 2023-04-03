@@ -13,8 +13,8 @@
 // import './2-operators/01-arithmetic';
 // import './2-operators/02-assignment';
 // import './2-operators/03-negation';
-import './2-operators/04-comparison';
-// import './2-operators/05-logical';
+// import './2-operators/04-comparison';
+import './2-operators/05-logical';
 // import './2-operators/06-nullish';
 // import './2-operators/07-ternary';
 // import './2-operators/08-spread';
