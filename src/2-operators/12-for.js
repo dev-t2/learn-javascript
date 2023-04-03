@@ -1,5 +1,5 @@
 for (let i = 0; i < 10; i++) {
-  console.log(i);
+  console.log(`i: ${i}`);
 }
 
 console.log('');
@@ -13,34 +13,30 @@ for (let i = 9; i > -1; i--) {
     break;
   }
 
-  console.log(i);
+  console.log(`i: ${i}`);
 }
 
 console.log('');
 
 const users = [
-  { id: 1, name: 'user1' },
-  { id: 2, name: 'user2' },
-  { id: 3, name: 'user3' },
+  { id: 1, name: 'User A' },
+  { id: 2, name: 'User B' },
+  { id: 3, name: 'User C' },
 ];
 
 for (let i = 0; i < users.length; i++) {
-  console.log(users[i].name);
+  console.log(`users[${i}].name: ${users[i].name}`);
 }
 
 console.log('');
 
 for (const user of users) {
-  console.log(user.name);
+  console.log(`user.name: ${user.name}`);
 }
 
-const user = {
-  id: 1,
-  name: 'user',
-  email: 'user@email.com',
-};
-
 console.log('');
+
+const user = { id: 1, name: 'User A', email: 'user@email.com' };
 
 for (const key in user) {
   console.log(`key: ${key}, value: ${user[key]}`);
