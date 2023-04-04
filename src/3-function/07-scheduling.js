@@ -5,7 +5,7 @@ buttonElement.innerHTML = 'Clear Timeout';
 
 bodyElement.appendChild(buttonElement);
 
-console.log('Set Schedule');
+console.log('Set Timeout & Interval');
 
 const timeout = setTimeout(() => {
   console.log('setTimeout');
@@ -16,7 +16,7 @@ const interval = setInterval(() => {
 }, 1000);
 
 buttonElement.addEventListener('click', () => {
-  console.log('Clear Schedule');
+  console.log('Clear Timeout & Interval');
 
   clearTimeout(timeout);
   clearInterval(interval);
