@@ -3,13 +3,15 @@
 const a = 4;
 
 const func1 = () => {
-  console.log(a * 2);
+  console.log(`a * 2: ${a * 2}`);
 };
 
 func1();
 
+console.log('');
+
 (() => {
-  console.log(a * 3);
+  console.log(`a * 3: ${a * 3}`);
 })();
 
 console.log('');
