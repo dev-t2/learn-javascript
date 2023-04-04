@@ -21,10 +21,10 @@
 // import './2-operators/09-destructuring';
 // import './2-operators/10-optional-chaining';
 // import './2-operators/11-if';
-import './2-operators/12-for';
+// import './2-operators/12-for';
 
 /* 3. Function */
-// import './3-function/01-hoisting';
+import './3-function/01-hoisting';
 // import './3-function/02-return';
 // import './3-function/03-parameter';
 // import './3-function/04-arrow';

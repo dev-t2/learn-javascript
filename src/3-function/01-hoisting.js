@@ -19,8 +19,9 @@ func2();
 console.log('');
 
 const func4 = function func3() {
-  console.log('function');
+  console.log('func3');
 };
 
 // func3();
+
 func4();
