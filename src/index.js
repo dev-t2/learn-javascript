@@ -30,8 +30,8 @@
 // import './3-function/04-arrow-function';
 // import './3-function/05-iife';
 // import './3-function/06-callback';
-import './3-function/07-scheduling';
-// import './3-function/08-this';
+// import './3-function/07-scheduling';
+import './3-function/08-this';
 
 /* 4. Class */
 // import './4-class/01-prototype';

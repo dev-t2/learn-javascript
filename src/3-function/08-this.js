@@ -36,14 +36,14 @@ console.log('');
 const timer = {
   title: 'Timer',
   timeout() {
-    console.log(this.title);
+    console.log(`this.title: ${this.title}`);
 
     setTimeout(function () {
-      console.log(`function: ${this.title}`);
+      console.log(`Function => this.title: ${this.title}`);
     }, 1000);
 
     setTimeout(() => {
-      console.log(`arrow: ${this.title}`);
+      console.log(`Arrow Function => this.title: ${this.title}`);
     }, 1000);
   },
 };
