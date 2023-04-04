@@ -19,7 +19,7 @@ const func3 = (a, b, callback) => {
 };
 
 func3(1, 2, (result) => {
-  console.log(result);
+  console.log(`result: ${result}`);
 });
 
 const loadImage = (url, callback) => {
