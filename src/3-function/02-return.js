@@ -15,6 +15,8 @@ const func2 = function () {
 
 console.log(func2());
 
+console.log('');
+
 const func3 = function () {};
 
 console.log(func3());
