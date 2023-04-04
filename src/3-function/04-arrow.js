@@ -2,17 +2,21 @@ const func1 = function (a, b) {
   return a + b;
 };
 
-console.log(func1(1, 2));
+console.log(`func1(1, 2): ${func1(1, 2)}`);
+
+console.log('');
 
 const func2 = (a, b) => {
   return a + b;
 };
 
-console.log(func2(1, 2));
+console.log(`func2(1, 2): ${func2(1, 2)}`);
+
+console.log('');
 
 const func3 = (a, b) => a + b;
 
-console.log(func3(1, 2));
+console.log(`func3(1, 2): ${func3(1, 2)}`);
 
 const a = () => {};
 

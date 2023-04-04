@@ -26,8 +26,8 @@
 /* 3. Function */
 // import './3-function/01-hoisting';
 // import './3-function/02-return';
-import './3-function/03-parameter';
-// import './3-function/04-arrow';
+// import './3-function/03-parameter';
+import './3-function/04-arrow';
 // import './3-function/05-iife';
 // import './3-function/06-callback';
 // import './3-function/07-scheduling';
