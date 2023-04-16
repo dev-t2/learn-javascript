@@ -8,13 +8,13 @@ class User {
   }
 
   set customName(name) {
-    console.log('Setter Name');
+    console.log('Setter');
 
     this.name = name;
   }
 
   get customName() {
-    console.log('Getter Name');
+    console.log('Getter');
 
     return this.name;
   }
@@ -23,7 +23,7 @@ class User {
 const userA = new User('User A');
 
 console.log(userA);
-console.log(userA.getName());
+console.log(`getName: ${userA.getName()}`);
 
 console.log('');
 
