@@ -36,8 +36,8 @@
 /* 4. Class */
 // import './4-class/01-prototype';
 // import './4-class/02-es6';
-import './4-class/03-static';
-// import './4-class/04-inheritance';
+// import './4-class/03-static';
+import './4-class/04-inheritance';
 // import './4-class/05-instanceof';
 
 /* 5. Standard Built-in Objects */

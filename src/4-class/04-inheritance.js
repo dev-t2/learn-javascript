@@ -34,6 +34,8 @@ class Bicycle extends Vehicle {
 
 const bicycle = new Bicycle(300);
 
+console.log(bicycle);
+
 bicycle.accelerate();
 bicycle.accelerate();
 
@@ -52,7 +54,7 @@ class Car extends Bicycle {
   // Overriding
   accelerate() {
     if (!this.license) {
-      console.error('Unavailable Accelerate');
+      console.error('No License: Unavailable Accelerate');
     } else {
       this.speed += this.acceleration;
 
@@ -64,12 +66,16 @@ class Car extends Bicycle {
 const carA = new Car(true, 7000, 10);
 const carB = new Car(false, 4000, 6);
 
+console.log(carA);
+
 carA.accelerate();
 carA.accelerate();
 
 console.log(carA);
 
 console.log('');
+
+console.log(carB);
 
 carB.accelerate();
 
