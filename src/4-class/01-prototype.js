@@ -1,9 +1,9 @@
 const array1 = new Array(1, 2, 3);
 
 console.log(array1);
-console.log(array1.length);
-console.log(array1.includes(2));
-console.log(array1.includes(4));
+console.log(`length: ${array1.length}`);
+console.log(`includes(2): ${array1.includes(2)}`);
+console.log(`includes(4): ${array1.includes(4)}`);
 
 console.log('');
 
@@ -12,6 +12,8 @@ Array.prototype.custom = function () {
 };
 
 array1.custom();
+
+console.log('');
 
 const array2 = [];
 
@@ -28,12 +30,6 @@ User.prototype.getName = function () {
 };
 
 const userA = new User('User A');
-const userB = new User('User B');
 
 console.log(userA);
-console.log(userA.getName());
-
-console.log('');
-
-console.log(userB);
-console.log(userB.getName(0));
+console.log(`getName: ${userA.getName()}`);
