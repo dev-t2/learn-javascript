@@ -17,16 +17,16 @@ class User {
 const userA = new User('User A');
 
 console.log(userA);
-console.log(userA.getName());
+console.log(`getName: ${userA.getName()}`);
+
+console.log('');
+
+console.log(`isUser: ${User.isUser(userA)}`);
+// console.log(userA.isUser());
 
 console.log('');
 
 const userB = { id: 2 };
 
-console.log(User.isUser(userA));
-// console.log(userA.isUser());
-
-console.log('');
-
 // console.log(User.getName());
-console.log(User.isUser(userB));
+console.log(`isUser: ${User.isUser(userB)}`);
