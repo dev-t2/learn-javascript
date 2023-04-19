@@ -19,6 +19,9 @@ console.log(``);
 const date4 = new Date();
 
 console.log(`date4: ${date4}`);
+
+console.log(``);
+
 console.log(`getFullYear: ${date4.getFullYear()}`);
 console.log(`getMonth: ${date4.getMonth()}`);
 console.log(`getDate: ${date4.getDate()}`);
@@ -46,9 +49,16 @@ console.log(`updated getSeconds: ${date4.getSeconds()}`);
 console.log(``);
 
 const date5 = new Date();
+
+console.log(`date5: ${date5}`);
+
+console.log(``);
+
 const day = date5.getDay();
 
-console.log(`day: ${day}`);
+console.log(`getDay: ${day}`);
+
+console.log(``);
 
 const getDay = (day) => {
   if (day === 0) {
@@ -77,6 +87,9 @@ console.log(``);
 const date6 = new Date();
 
 console.log(`date6: ${date6}`);
+
+console.log(``);
+
 console.log(`getTime: ${date6.getTime()}`);
 
 console.log(``);
@@ -100,20 +113,24 @@ Date.prototype.isAfter = function (date) {
 const date7 = new Date('Sat Apr 01 2023 13:40:01 GMT+0900 (한국 표준시)');
 const date8 = new Date('Thu May 02 2024 14:24:30 GMT+0900 (한국 표준시)');
 
-console.log(`isAfter: ${date7.isAfter(date8)}`);
+console.log(`date7: ${date7}`);
+console.log(`date8: ${date8}`);
 
 console.log(``);
 
-console.log(`isAfter: ${date8.isAfter(date7)}`);
+console.log(`date7.isAfter(date8): ${date7.isAfter(date8)}`);
+console.log(`date8.isAfter(date7): ${date8.isAfter(date7)}`);
 
 console.log(``);
 
 const time = new Date().getTime();
 
-console.log(`now: ${Date.now()}`);
+console.log(`Date.now(): ${Date.now()}`);
 console.log(`time: ${time}`);
 
+console.log(``);
+
 setTimeout(() => {
-  console.log(`now: ${Date.now()}`);
-  console.log(`time: ${time}`);
+  console.log(`setTimeout Date.now(): ${Date.now()}`);
+  console.log(`setTimeout time: ${time}`);
 }, 1000);
