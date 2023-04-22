@@ -5,13 +5,16 @@ const source3 = { c: 5, d: 6 };
 const result1 = Object.assign({}, source1, source2, source3);
 const result2 = { ...source1, ...source2, ...source3 };
 
-console.log({ result1, result2 });
+console.log(result1);
+console.log(result2);
 
 console.log('');
 
 const users = { id: 1, name: 'User A', age: 35 };
 
 console.log(Object.entries(users));
+
+console.log('');
 
 for (const [key, value] of Object.entries(users)) {
   console.log({ key, value });

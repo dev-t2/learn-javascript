@@ -45,8 +45,8 @@
 // import './5-standard/02-number';
 // import './5-standard/03-math';
 // import './5-standard/04-date';
-import './5-standard/05-array';
-// import './5-standard/06-object';
+// import './5-standard/05-array';
+import './5-standard/06-object';
 // import './5-standard/07-json';
 
 /* 6. Asynchronous */
