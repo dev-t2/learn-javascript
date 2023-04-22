@@ -1,7 +1,7 @@
 const functionA = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      console.log(1);
+      console.log('function A');
 
       resolve();
     }, 1000);
@@ -11,7 +11,7 @@ const functionA = () => {
 const functionB = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      console.log(2);
+      console.log('function B');
 
       resolve();
     }, 1000);
@@ -21,7 +21,7 @@ const functionB = () => {
 const functionC = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      console.log(3);
+      console.log('function C');
 
       resolve();
     }, 1000);
@@ -30,7 +30,7 @@ const functionC = () => {
 
 const functionD = () => {
   setTimeout(() => {
-    console.log(4);
+    console.log('function D');
   }, 1000);
 };
 
