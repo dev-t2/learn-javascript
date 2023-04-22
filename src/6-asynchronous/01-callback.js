@@ -1,6 +1,6 @@
 const functionA = (callback) => {
   setTimeout(() => {
-    console.log(1);
+    console.log('function A');
 
     callback();
   }, 1000);
@@ -8,7 +8,7 @@ const functionA = (callback) => {
 
 const functionB = (callback) => {
   setTimeout(() => {
-    console.log(2);
+    console.log('function B');
 
     callback();
   }, 1000);
@@ -16,7 +16,7 @@ const functionB = (callback) => {
 
 const functionC = (callback) => {
   setTimeout(() => {
-    console.log(3);
+    console.log('function C');
 
     callback();
   }, 1000);
@@ -24,7 +24,7 @@ const functionC = (callback) => {
 
 const functionD = () => {
   setTimeout(() => {
-    console.log(4);
+    console.log('function D');
   }, 1000);
 };
 
